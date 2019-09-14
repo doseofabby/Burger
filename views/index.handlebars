@@ -1,0 +1,59 @@
+<header>
+    <h1 id="header" style="">The Krusty Krab</h1>
+    <br>
+
+    <h2 class="sub-header"><strong>Order with Squidward</strong></h2>
+    <br>
+    <div id="bob-pic">
+        <img style="width:300px;height:220px;" src="https://i.ytimg.com/vi/k5e1HPeusiA/hqdefault.jpg" alt="burger" />
+    </div>
+</header>
+
+
+
+    
+        <h1 class="sub-header">Burgers</h1>
+    {{!-- </div>
+    <div class="card col-md-5"> --}}
+        <h3 class="card-title sub-header" id="not-devoured">Available</h3>
+        {{!-- <div class="card-body"> --}}
+            <ul>
+                
+                    {{#each burger}}
+                    {{#unless devoured}}
+                    <p>
+                        {{burger_name}}
+                    </p>
+                    <button type="button" class="btn btn-info" data-id="{{id}}">Devour</button>
+                    {{/unless}}
+                    {{/each}}
+
+                
+            </ul>
+        </div>
+    </div>
+    {{!-- <div class="card col-md-5 devoured"> --}}
+        <h3 class="card-title sub-header" id="devoured" >Devoured</h3>
+        {{!-- <div class="card-body"> --}}
+            <ul>
+                {{#each burger}}
+                {{#if devoured}}
+                <p>
+                    {{burger_name}}
+                </p>
+                <button type="button" class="btn btn-info">Make New</button>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    
+
+    {{!-- Add Burger --}}
+    <div class="sub-header" ><strong>Add New Burger</strong></div>
+    <form id="burgers">
+        <div class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="Add Burger">
+        </div>
+        <button type="button" class="btn btn-info">submit</button>
+    </form>
+</div>
