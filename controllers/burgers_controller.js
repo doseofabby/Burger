@@ -30,15 +30,17 @@ router.post("/api/burger", (req, res) => {
 });
 
 // router.put("/api/burger/:id", (req, res) => {
-//     let status = Boolean(req.body.devoured);
-//     // console.log("burger status", status);
-
-//     burger.update("devoured", status, "id", req.params.id, (result) => {
-//         if (result.changedRows === 0) {
-//             return res.status(404).end();
-//         }
-//         res.status(200).end();
+//     let status = Boolean(req.body.burger_id, function(result){
+//         res.redirect('/');
 //     });
+    // console.log("burger status", status);
+
+    // burger.update("devoured", status, "id", req.params.id, (result) => {
+    //     if (result.changedRows === 0) {
+    //         return res.status(404).end();
+    //     }
+    //     res.status(200).end();
+    // });
 // });
 
 router.put('/burger/update', function(req,res){
